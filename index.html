@@ -1,0 +1,799 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laaraib Ahmad - Software Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'primary': '#1e40af',
+                        'primary-light': '#3b82f6',
+                        'primary-dark': '#1e3a8a',
+                        'accent': '#0ea5e9',
+                        'dark': '#0f172a',
+                        'dark-light': '#1e293b',
+                        'gray-custom': '#64748b',
+                        'gray-light': '#f8fafc',
+                        'success': '#10b981',
+                        'warning': '#f59e0b',
+                    },
+                    boxShadow: {
+                        'custom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'custom-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'custom-xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-light text-dark leading-relaxed">
+    <!-- Header Section -->
+    <header class="relative bg-gradient-to-br from-dark via-dark-light to-primary-dark text-white py-20 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-primary/20 to-transparent transform -skew-y-6"></div>
+            <div class="absolute top-20 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-primary-light/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 text-center">
+            <div class="animate-fade-in">
+                <div class="mb-6">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary-light to-accent rounded-full flex items-center justify-center shadow-custom-xl animate-float">
+                        <span class="text-4xl font-bold text-white">LA</span>
+                    </div>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-bold mb-4 gradient-text">Laaraib Ahmad</h1>
+                <div class="flex items-center justify-center gap-3 mb-8">
+                    <div class="h-px bg-gradient-to-r from-transparent via-accent to-transparent w-20"></div>
+                    <p class="text-2xl font-light text-gray-300 tracking-wide">Software Engineer</p>
+                    <div class="h-px bg-gradient-to-r from-transparent via-accent to-transparent w-20"></div>
+                </div>
+                <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Crafting scalable solutions with modern technologies and innovative approaches
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8 text-sm animate-slide-up">
+                <div class="glass-effect rounded-full px-6 py-3 flex items-center gap-3 hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 bg-gradient-to-br from-accent to-primary-light rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <span class="font-medium">laaraibahmad17@gmail.com</span>
+                </div>
+                <div class="glass-effect rounded-full px-6 py-3 flex items-center gap-3 hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 bg-gradient-to-br from-success to-accent rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <span class="font-medium">+91-9792257726</span>
+                </div>
+                <div class="glass-effect rounded-full px-6 py-3 flex items-center gap-3 hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <span class="font-medium">linkedin.com/in/laaraib172k</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <!-- About Me Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-custom">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold gradient-text">About Me</h2>
+                </div>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl transform rotate-1"></div>
+                <div class="relative bg-white p-10 rounded-3xl shadow-custom-xl border border-gray-200/50 card-hover">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-light to-accent rounded-2xl flex items-center justify-center shadow-custom">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xl text-gray-custom leading-relaxed font-medium">
+                                Results-driven <span class="text-primary font-semibold">Software Engineer</span> with <span class="text-accent font-semibold">3+ years</span> of experience in backend development, full-stack engineering, and enterprise solutions.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 text-primary font-medium rounded-full text-sm border border-primary/20">Backend Development</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-success/10 to-accent/10 text-success font-medium rounded-full text-sm border border-success/20">Full-Stack Engineering</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-warning/10 to-accent/10 text-warning font-medium rounded-full text-sm border border-warning/20">Enterprise Solutions</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-accent/10 to-primary/10 text-accent font-medium rounded-full text-sm border border-accent/20">Cloud-Native Apps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-custom">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-1a1 1 0 00-1 1v1h2V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold gradient-text">Work Experience</h2>
+                </div>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent"></div>
+                
+                <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 ml-20 card-hover">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-12 top-8 w-6 h-6 bg-gradient-to-br from-primary to-accent rounded-full border-4 border-white shadow-custom"></div>
+                    
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <h3 class="text-2xl font-bold text-dark">Software Engineer</h3>
+                                <div class="px-3 py-1 bg-gradient-to-r from-success/20 to-success/10 text-success font-medium rounded-full text-sm border border-success/30">
+                                    Current
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary-light to-accent rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-6a1 1 0 00-1-1H9a1 1 0 00-1 1v6a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-xl font-semibold text-primary">HCL Technologies Ltd.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-2 rounded-full border border-gray-200">
+                            <svg class="w-4 h-4 text-gray-custom" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-custom font-medium text-sm">Aug 2022 – Present</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-2xl border border-primary/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm font-mono">AS</span>
+                                </div>
+                                <h4 class="font-semibold text-dark">System Development</h4>
+                            </div>
+                            <p class="text-gray-custom text-sm">Developed and modified RPGLE and CLLE programs on AS400 systems</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-success/5 to-accent/5 p-6 rounded-2xl border border-success/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 bg-gradient-to-br from-success to-accent rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm font-mono">DB</span>
+                                </div>
+                                <h4 class="font-semibold text-dark">Data Management</h4>
+                            </div>
+                            <p class="text-gray-custom text-sm">Managed DB2 and SQL data migration & optimization</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-warning/5 to-accent/5 p-6 rounded-2xl border border-warning/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 bg-gradient-to-br from-warning to-accent rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm font-mono">UI</span>
+                                </div>
+                                <h4 class="font-semibold text-dark">Interface Design</h4>
+                            </div>
+                            <p class="text-gray-custom text-sm">Built UI/UX interfaces and improved system efficiency</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-accent/5 to-primary/5 p-6 rounded-2xl border border-accent/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm font-mono">SF</span>
+                                </div>
+                                <h4 class="font-semibold text-dark">Salesforce Admin</h4>
+                            </div>
+                            <p class="text-gray-custom text-sm">Provided Salesforce Admin support (workflows, automation, integrations)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-warning to-accent rounded-xl flex items-center justify-center shadow-custom">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold gradient-text">Achievements</h2>
+                </div>
+                <div class="w-24 h-1 bg-gradient-to-r from-warning to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-warning/20 to-accent/20 rounded-3xl transform rotate-2 group-hover:rotate-1 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-20 h-20 bg-gradient-to-br from-warning to-accent rounded-2xl flex items-center justify-center shadow-custom animate-float">
+                                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Employee of the Year</h3>
+                                <div class="flex items-center gap-2 mb-3">
+                                    <div class="px-3 py-1 bg-gradient-to-r from-warning/20 to-warning/10 text-warning font-semibold rounded-full text-sm border border-warning/30">
+                                        2022–23
+                                    </div>
+                                </div>
+                                <p class="text-gray-custom">Recognized for outstanding performance and exceptional contribution to project success</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl transform -rotate-2 group-hover:-rotate-1 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-custom animate-float" style="animation-delay: 1s;">
+                                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Hard Work & Dedication Award</h3>
+                                <div class="flex items-center gap-2 mb-3">
+                                    <div class="px-3 py-1 bg-gradient-to-r from-primary/20 to-primary/10 text-primary font-semibold rounded-full text-sm border border-primary/30">
+                                        2024–25
+                                    </div>
+                                </div>
+                                <p class="text-gray-custom">Awarded for consistent dedication and commitment to excellence in software development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-custom">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold gradient-text">Projects & Technical Work</h2>
+                </div>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-custom flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Scalable Microservices Applications</h3>
+                                <p class="text-gray-custom mb-4">Built enterprise-grade microservices architecture with high availability and fault tolerance for large-scale applications.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 font-medium rounded-full text-sm border border-blue-200">Python</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-green-50 to-green-100 text-green-700 font-medium rounded-full text-sm border border-green-200">Django</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 font-medium rounded-full text-sm border border-purple-200">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-warning/10 rounded-3xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-accent to-warning rounded-2xl flex items-center justify-center shadow-custom flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Serverless Cloud Applications</h3>
+                                <p class="text-gray-custom mb-4">Developed cost-effective serverless solutions with automatic scaling and high performance on AWS infrastructure.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 font-medium rounded-full text-sm border border-orange-200">AWS Lambda</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 font-medium rounded-full text-sm border border-purple-200">S3</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-red-50 to-red-100 text-red-700 font-medium rounded-full text-sm border border-red-200">DynamoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-success/10 to-primary/10 rounded-3xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-success to-primary rounded-2xl flex items-center justify-center shadow-custom flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-dark mb-2">CI/CD Pipelines</h3>
+                                <p class="text-gray-custom mb-4">Implemented automated deployment pipelines reducing deployment time by 80% and improving code quality.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 font-medium rounded-full text-sm border border-blue-200">Docker</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-green-50 to-green-100 text-green-700 font-medium rounded-full text-sm border border-green-200">Kubernetes</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-yellow-50 to-yellow-100 text-yellow-700 font-medium rounded-full text-sm border border-yellow-200">Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-custom flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Virtual Trial Room</h3>
+                                <p class="text-gray-custom mb-4">ML-powered virtual fitting solution with real-time body measurement and clothing simulation technology.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gradient-to-r from-green-50 to-green-100 text-green-700 font-medium rounded-full text-sm border border-green-200">Django</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 font-medium rounded-full text-sm border border-purple-200">Machine Learning</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 font-medium rounded-full text-sm border border-blue-200">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-custom">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold gradient-text">Technical Skills</h2>
+                </div>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Programming Skills -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-custom">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">Programming</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 rounded-2xl border border-blue-200 text-center">
+                                <div class="font-mono text-blue-700 font-semibold">Python</div>
+                            </div>
+                            <div class="bg-gradient-to-r from-green-50 to-green-100 px-4 py-3 rounded-2xl border border-green-200 text-center">
+                                <div class="font-mono text-green-700 font-semibold">Django</div>
+                            </div>
+                            <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 px-4 py-3 rounded-2xl border border-yellow-200 text-center">
+                                <div class="font-mono text-yellow-700 font-semibold">JavaScript</div>
+                            </div>
+                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 rounded-2xl border border-blue-200 text-center">
+                                <div class="font-mono text-blue-700 font-semibold">TypeScript</div>
+                            </div>
+                            <div class="bg-gradient-to-r from-cyan-50 to-cyan-100 px-4 py-3 rounded-2xl border border-cyan-200 text-center">
+                                <div class="font-mono text-cyan-700 font-semibold">React.js</div>
+                            </div>
+                            <div class="bg-gradient-to-r from-green-50 to-green-100 px-4 py-3 rounded-2xl border border-green-200 text-center">
+                                <div class="font-mono text-green-700 font-semibold">Node.js</div>
+                            </div>
+                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 rounded-2xl border border-blue-200 text-center">
+                                <div class="font-mono text-blue-700 font-semibold">Go</div>
+                            </div>
+                            <div class="bg-gradient-to-r from-red-50 to-red-100 px-4 py-3 rounded-2xl border border-red-200 text-center">
+                                <div class="font-mono text-red-700 font-semibold">Java</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud & DevOps -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-warning/5 rounded-3xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-accent to-warning rounded-2xl flex items-center justify-center shadow-custom">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">Cloud & DevOps</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100 px-4 py-3 rounded-2xl border border-orange-200">
+                                <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">AWS</span>
+                                </div>
+                                <span class="font-semibold text-orange-700">Amazon Web Services</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 rounded-2xl border border-blue-200">
+                                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">🐳</span>
+                                </div>
+                                <span class="font-semibold text-blue-700">Docker & Kubernetes</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-gradient-to-r from-green-50 to-green-100 px-4 py-3 rounded-2xl border border-green-200">
+                                <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">⚙️</span>
+                                </div>
+                                <span class="font-semibold text-green-700">CI/CD Pipelines</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Databases & APIs -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-success/5 to-primary/5 rounded-3xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-success to-primary rounded-2xl flex items-center justify-center shadow-custom">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15.586 13V12a1 1 0 011-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">Data & APIs</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-2 rounded-xl border border-blue-200">
+                                <span class="font-semibold text-blue-700">PostgreSQL • MongoDB • DB2</span>
+                            </div>
+                            <div class="bg-gradient-to-r from-green-50 to-green-100 px-4 py-2 rounded-xl border border-green-200">
+                                <span class="font-semibold text-green-700">REST • GraphQL • gRPC</span>
+                            </div>
+                            <div class="bg-gradient-to-r from-purple-50 to-purple-100 px-4 py-2 rounded-xl border border-purple-200">
+                                <span class="font-semibold text-purple-700">OAuth • JWT • RBAC</span>
+                            </div>
+                            <div class="bg-gradient-to-r from-red-50 to-red-100 px-4 py-2 rounded-xl border border-red-200">
+                                <span class="font-semibold text-red-700">Redis • Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Architecture & Design -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-3xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-custom">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">Architecture</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 bg-gradient-to-r from-purple-50 to-purple-100 px-4 py-3 rounded-2xl border border-purple-200">
+                                <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                                <span class="font-semibold text-purple-700">Microservices</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-gradient-to-r from-indigo-50 to-indigo-100 px-4 py-3 rounded-2xl border border-indigo-200">
+                                <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                                <span class="font-semibold text-indigo-700">Event-Driven</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 rounded-2xl border border-gray-200">
+                                <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+                                <span class="font-semibold text-gray-700">SOLID Principles</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 rounded-2xl border border-blue-200">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <span class="font-semibold text-blue-700">System Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Emerging Technologies -->
+                <div class="relative group lg:col-span-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gradient-to-r from-indigo-500/5 to-purple-500/5 rounded-3xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+                    <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-8 card-hover">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-custom">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">Emerging Technologies</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="space-y-3">
+                                <div class="bg-gradient-to-r from-purple-50 to-purple-100 px-4 py-3 rounded-2xl border border-purple-200">
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">🔗</span>
+                                        <div>
+                                            <div class="font-semibold text-purple-700">Blockchain</div>
+                                            <div class="text-sm text-purple-600">Solidity • Ethereum</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 px-4 py-3 rounded-2xl border border-indigo-200">
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">🏢</span>
+                                        <div>
+                                            <div class="font-semibold text-indigo-700">Enterprise</div>
+                                            <div class="text-sm text-indigo-600">Hyperledger Fabric</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 rounded-2xl border border-blue-200">
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">🤖</span>
+                                        <div>
+                                            <div class="font-semibold text-blue-700">Machine Learning</div>
+                                            <div class="text-sm text-blue-600">TensorFlow • PyTorch</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-r from-orange-50 to-orange-100 px-4 py-3 rounded-2xl border border-orange-200">
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">⚡</span>
+                                        <div>
+                                            <div class="font-semibold text-orange-700">AI DevOps</div>
+                                            <div class="text-sm text-orange-600">Automation & Leadership</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-custom">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold gradient-text">Education</h2>
+                </div>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl transform -rotate-1"></div>
+                <div class="relative bg-white rounded-3xl shadow-custom-xl border border-gray-200/50 p-10 card-hover">
+                    <div class="flex items-start gap-8">
+                        <div class="flex-shrink-0">
+                            <div class="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-3xl flex items-center justify-center shadow-custom">
+                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-dark mb-3">Bachelor of Technology</h3>
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <div class="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center">
+                                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-6a1 1 0 00-1-1H9a1 1 0 00-1 1v6a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-xl font-semibold text-primary">Computer Science & Engineering</p>
+                                            <p class="text-gray-custom">Integral University, Lucknow</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-3 rounded-full border border-gray-200 lg:mt-0 mt-4">
+                                    <svg class="w-5 h-5 text-gray-custom" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-custom font-semibold">2018 – 2022</span>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-2xl border border-blue-200">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-blue-700 mb-1">4 Years</div>
+                                        <div class="text-sm text-blue-600">Duration</div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-2xl border border-green-200">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-green-700 mb-1">CSE</div>
+                                        <div class="text-sm text-green-600">Specialization</div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-2xl border border-purple-200">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-700 mb-1">2022</div>
+                                        <div class="text-sm text-purple-600">Graduated</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative bg-gradient-to-br from-dark via-dark-light to-primary-dark text-white py-16 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-primary-light rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary-light to-accent rounded-full flex items-center justify-center shadow-custom-xl">
+                    <span class="text-2xl font-bold text-white">LA</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 gradient-text">Let's Build Something Amazing Together</h3>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Ready to bring your next project to life with cutting-edge technology and innovative solutions.
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <a href="mailto:laaraibahmad17@gmail.com" class="glass-effect rounded-2xl px-8 py-4 flex items-center gap-4 hover:bg-white/20 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary-light rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-semibold">Email</div>
+                        <div class="text-sm text-gray-300">laaraibahmad17@gmail.com</div>
+                    </div>
+                </a>
+                
+                <a href="tel:+919792257726" class="glass-effect rounded-2xl px-8 py-4 flex items-center gap-4 hover:bg-white/20 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-br from-success to-accent rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-semibold">Phone</div>
+                        <div class="text-sm text-gray-300">+91-9792257726</div>
+                    </div>
+                </a>
+                
+                <a href="https://linkedin.com/in/laaraib172k" target="_blank" class="glass-effect rounded-2xl px-8 py-4 flex items-center gap-4 hover:bg-white/20 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-semibold">LinkedIn</div>
+                        <div class="text-sm text-gray-300">Connect with me</div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-300 mb-4">© 2024 Laaraib Ahmad. Crafted with passion for excellence.</p>
+                <div class="flex justify-center gap-6 text-sm text-gray-400">
+                    <span>Software Engineer</span>
+                    <span>•</span>
+                    <span>Full-Stack Developer</span>
+                    <span>•</span>
+                    <span>Cloud Architect</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9733d1f00490a5d3',t:'MTc1NTg4MDkxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
